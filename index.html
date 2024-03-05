@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datu, Sean Warner Dean T. | e-Portfolio</title>
+    <title>E-Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/assets/img1.png" alt="Image of Logo">
+    <link rel="icon" href="/assets/greenLogo.png" alt="Image of Logo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js"></script>
 
@@ -14,36 +14,42 @@
 <body>
   <!-- navbar -->
     <header>
-        <h1 class="logo">AHMYA</h1>
+      <h1 class="logo"><img src="/assets/navbarLogo.png" alt="Warner Logo" style="width: 100px; height: 100px;"></h1>
         <nav>
             <ul>
-                <li><a class="#Home">Home</a></li>
-                <li><a class="#About">About</a></li>
-                <li><a class="#Contact">Contact</a></li>
-                <li><a class="#Projects">Projects</a></li>
+                <li><a href="#" class="#Home">Home</a></li>
+                <li><a href="#about" class="#About">About</a></li>
+                <li><a href="#skills" class="Skills">Skills</a></li>
+                <li><a href="#projects" class="#Projects">Projects</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- main section -->
     <main>
-        <section>
-            <div class="content">
-                <div class="text">
-                  <h1 class="about">About</h1>
-                    <p>Welcome to my portfolio!!! My name is Sean Warner Dean T. Datu. Currently, I'm a Bachelor of Science in Information Technology student majoring in Web Development, and here you'll find a collection of projects that showcase my skills and passion.
-                       From dynamic web applications to responsive designs, explore the exciting world of my web development journey. Feel free to dive in and discover the creativity in every line of code.</p>
-                </div>
-                <div class="portimg">
-                    <img src="/assets/img.png" alt="Image of me">
-                </div>
-            </div>
-        </section>
+      <div class="home">
+      <h2>Welcome to my E-Portfolio!</h2>
+      <p>This is a space where I showcase my skills, projects, and experiences in the field of Information Technology and Web Development.</p>
+    </div>
     </main>
 
 
+  <!-- About  -->
+  <section id="about">
+    <div class="divAbout">
+        <div class="text">
+          <h1 class="aboutTitle">About</h1>
+            <p class="contentAbout">Greetings! I am Sean Warner Dean T. Datu, a dedicated student pursuing a Bachelor of Science in Information Technology with a focus on Web Development. Within this portfolio, you will find a curated collection of my projects, showcasing a spectrum of skills – from dynamic web applications to meticulously crafted responsive designs. Explore my journey in web development and witness the professionalism and innovation woven into every line of code. Welcome to my professional e-portfolio!</p>
+        </div>
+        <div class="portimg-container">
+            <img src="/assets/img.png" alt="Image of me">
+        </div>
+    </div>
+</section>
+
 <!-- skill-bar -->
-    <div class="container">
+    <section id="skills">
+    <div class="containerSkills">
       <h1 class="skilltitle">Skills</h1>
         <div class="skill">
           <div class="skill-name">HTML</div>
@@ -81,9 +87,12 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <h1 class="projecttitle">Projects</h1>
+
+      <!-- projects -->
       <section id="projects">
+      <h1 class="projecttitle">Projects</h1>
         <div class="project">
             <img class = "iconsproject" src="/assets/petshop_logo.png" alt="Project 1">
             <p><b>petshop.com</b> - petshop.com promises a unique shopping experience for pet lovers, offering a variety of products and services, including exclusive features like a boarding facility. Our site ensures a smooth and user-friendly shopping journey, starting with premium pet food and extending to unique accessories. Key skills include web development, HTML, CSS, and potentially JavaScript, crucial for creating an intuitive platform. 
@@ -99,8 +108,9 @@
         <div class="project">
             <img class = "iconsproject" src="/assets/mysweetspot-logo.png" alt="Project 3">
             <p><b>mysweetsspot.com</b> - mysweetsspot.com indulges in a delightful journey through the culinary world, starting with exquisite cakes and a variety of delicious food, complemented by artisanal bread, among other delectable offerings. Our platform promises a splendid experience, where each visit becomes a delightful and delicious chapter in your story. 
-              Proficiency in web development, HTML, CSS, and occasionally JavaScript is crucial to ensure we provide our customers with a friendly and seamless interface to explore and savor all the delicious treats!</p> <br>
+              Proficiency in web development, HTML, CSS, and occasionally JavaScript is crucial to ensure we provide our customers with a friendly and seamless interface to explore and savor all the delicious treats!<br><br>
               Visit my <a href="https://mysweetsspot.com" class="highlight-link">Website project</a> for more details.
+            </p>
         </div>
         <div class="project">
             <img class = "iconsproject" src="/assets/minion-logo.png" alt="Project 4">
@@ -120,7 +130,7 @@
 
 <!-- footer -->
     <footer>
-      <p>&copy; 2024 Portfolio | Designed by: <u>Datu, Sean Warner Dean T.</u> | Contact me: <a class="footericon" href="mailto:seandatu12@gmail.com"><i class="fas fa-envelope"></i></a> | GitHub: <a class="footericon" href="https://github.com/ahmyaaa"><i class="fab fa-github"></i></a></p>
+      <p>&copy; 2024 Portfolio | Designed by: <u>Datu, Sean Warner Dean T.</u> | Contact me through Email: <a class="footericon" href="mailto:seandatu12@gmail.com"><i class="fas fa-envelope"></i></a> | GitHub: <a class="footericon" href="https://github.com/ahmyaaa"><i class="fab fa-github"></i></a></p>
           </footer>
 
 </body>
