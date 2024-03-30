@@ -38,8 +38,8 @@ section {
 
 header {
     top: 0;
-    position: sticky;
-    z-index: 900;
+    /* position: sticky;
+    z-index: 900; */
     background-color: #111111;
     color: #fff;
     display: flex; 
@@ -81,7 +81,7 @@ main {
     padding: 10px; 
     background: rgba(32, 22, 38, 0.8);
     width: auto; 
-    height: 100vh;
+    height: 90vh;
 }
 
 .home{
@@ -229,41 +229,92 @@ main {
  
 
 /* projects */
-
-#projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.project {
-    width: 100%; 
-    max-width: 400px; 
-    margin: 20px;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.project p {
-    text-align: justify;
-    font-family: CenturyGotnic, Arial, sans-serif;
-}
-
 .projecttitle {
     text-align: center;
     font-size: 60px;
     font-family: AgencyFB, Arial, sans-serif;
 }
 
+/* projects container */
+#projects {
+    overflow-y: hidden;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.slideshow-container {
+    margin-bottom: 20px;
+}
+
+.mySlides {
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.textproject {
+    color: #f2f2f2;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 10px;
+    flex: 1;
+    font-family: CenturyGotnic, Arial, sans-serif;
+    overflow-y: hidden; 
+}
+
+.iconsproject {
+    max-width: 50px;
+    border-radius: 8px;
+}
+
+
+.prev, .next {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.prev:hover, .next:hover {
+  background-color: #00b441;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
 .highlight-link {
     color: #fff;
 }
+
+/* CSS for the dots/bullets */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-bottom: 10px;
+}
+
+.active {
+    background-color: #00b441;
+}
+
 
 
 /* scroll to top */
@@ -304,39 +355,102 @@ footer {
 
 
  /* Responsive */
- @media screen and (min-width: 768px) and (max-width: 1900px) {
-    .content {
-        flex-direction: row; 
-        justify-content: space-between;
-    }
-    .logo {
-        font-size: 24px;
+ /* Mobile Styles */
+@media screen and (max-width: 767px) {
+    body {
+        background-attachment: scroll; /* Allow background scrolling on mobile */
     }
 
-    nav a {
-        font-size: 16px;
+    header {
+        padding: 10px; /* Adjust padding for mobile header */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically for mobile */
+        align-items: center; /* Center-align navigation items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for mobile navigation items */
+    }
+
+    header h1 {
+        font-size: 24px; /* Adjust font size for mobile header */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for mobile content */
+    }
+
+    .home {
+        padding-left: 5%; /* Adjust padding for mobile screens */
+        padding-top: 30px; /* Adjust padding for mobile screens */
+        font-size: 18px; /* Adjust font size for mobile screens */
+    }
+
+    .resume,
+    .resume:hover {
+        padding: 15px; /* Adjust padding for mobile */
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .divAbout {
+        flex-direction: column; /* Stack about content vertically for mobile */
+    }
+
+    .aboutTitle {
+        font-size: 36px; /* Adjust font size for mobile */
     }
 
     .text {
-        font-size: 16px; 
-        padding-left: 2rem; 
-        margin-right: 1rem; 
+        padding: 10px; /* Adjust padding for mobile */
+        margin-right: 0;
     }
 
     .portimg-container {
-        margin-left: auto;
-        margin-top: 0; 
+        margin-right: 5%; /* Adjust margin for mobile */
     }
 
-    .skill-bar {
-        height: 20px;
+    .portimg-container img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .skill-progress {
-        height: 20px;
+    .containerSkills {
+        padding: 10px; /* Adjust padding for mobile */
     }
 
+    .skilltitle {
+        font-size: 36px; /* Adjust font size for mobile */
+    }
+
+    .skill,
+    .skill-name,
     .percentage {
-        font-size: 14px;
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .skill-bar,
+    .skill-progress {
+        height: 12px; /* Adjust height for mobile */
+    }
+
+    .project {
+        max-width: 100%; /* Adjust max-width for mobile */
+        margin: 20px 0; /* Adjust margin for mobile */
+    }
+
+    .projecttitle {
+        font-size: 36px; /* Adjust font size for mobile */
+    }
+
+    #scrollTopBtn {
+        bottom: 20px; /* Adjust bottom position for mobile */
+        right: 10px; /* Adjust right position for mobile */
+        padding: 8px 16px; /* Adjust padding for mobile */
+    }
+
+    footer {
+        padding: 0.5rem; /* Adjust padding for mobile */
     }
 }
