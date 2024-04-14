@@ -61,3 +61,9 @@ document.querySelector('.prev').addEventListener('click', function() {
 document.querySelector('.next').addEventListener('click', function() {
   plusSlides(1);
 });
+
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+  var navbarLinks = document.getElementById('navbar');
+  navbarLinks.classList.toggle('active');
+});

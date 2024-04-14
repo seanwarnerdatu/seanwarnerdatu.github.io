@@ -23,8 +23,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
+
 
 .logo {
     padding-left: 20px;
@@ -35,6 +35,10 @@ body {
 section {
     padding-top: 70px; 
 }
+
+.menu-icon {
+    display: none;
+  }
 
 header {
     top: 0;
@@ -452,15 +456,80 @@ footer {
       opacity: 1;
     }
   }
+
+  @keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+  
  /* Responsive */
  /* Mobile Styles */
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 430px) {
     body {
-        background-attachment: scroll; /* Allow background scrolling on mobile */
+        background-image: url('/assets/bg.png');
+        overflow-x: hidden;
     }
 
     header {
         padding: 10px; /* Adjust padding for mobile header */
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logo-size {
+        width: 75px;
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 10px; /* Adjust margin for smaller screens */
+        margin-bottom: 2px;
+        position: relative; /* Make the menu icon container relative */
+    }
+
+    .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 76%;
+        right: 0;
+        background-color: #333333;
+        z-index: 999;
+        padding-bottom: 30px;
+        text-align: center;
+        opacity: 0;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    .navbar.active {
+        display: flex; 
+        animation-name: fadeLeft; 
+    }
+  
+    .navbar:not(.active) {
+        display: flex; 
+        animation-name: fadeRight; 
     }
 
     nav ul {
@@ -468,24 +537,28 @@ footer {
         align-items: center; /* Center-align navigation items */
     }
 
-    nav ul li {
-        margin: 10px 0; /* Adjust margin for mobile navigation items */
+    main {
+        padding: 10px; /* Adjust padding for mobile content */
     }
 
-    header h1 {
-        font-size: 24px; /* Adjust font size for mobile header */
+    #scrollTopBtn {
+        display: flex; /* Ensure the button is visible */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
     }
 
     .home {
         padding-left: 5%; /* Adjust padding for mobile screens */
-        padding-top: 30px; /* Adjust padding for mobile screens */
-        font-size: 18px; /* Adjust font size for mobile screens */
+        padding-top: 20px; /* Adjust padding for mobile screens */
+        font-size: 16px; /* Adjust font size for mobile screens */
     }
 
     .resume,
     .resume:hover {
-        padding: 15px; /* Adjust padding for mobile */
-        font-size: 16px; /* Adjust font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+        font-size: 14px; /* Adjust font size for mobile */
     }
 
     .divAbout {
@@ -493,7 +566,7 @@ footer {
     }
 
     .aboutTitle {
-        font-size: 36px; /* Adjust font size for mobile */
+        font-size: 24px; /* Adjust font size for mobile */
     }
 
     .text {
@@ -510,22 +583,35 @@ footer {
         height: auto;
     }
 
-    .containerSkills {
+    .mySlides {
         padding: 10px; /* Adjust padding for mobile */
     }
 
-    .skilltitle {
-        font-size: 36px; /* Adjust font size for mobile */
+    .textproject {
+        margin-bottom: 10px; /* Adjust margin for mobile */
     }
 
-    .skill,
-    .skill-name,
-    .percentage {
-        font-size: 14px; /* Adjust font size for mobile */
+    .bottom-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .skill-bar,
-    .skill-progress {
-        height: 12px; /* Adjust height for mobile */
+    .bottom-images img {
+        width: 100%;
+        max-width: 150px; /* Adjust max-width for smaller screens */
+        margin: 5px; /* Add margin between images */
+    }
+
+    .dot-container,
+    .buttons-container {
+        text-align: center;
+    }
+
+    .dot,
+    .prev,
+    .next {
+        display: inline-block;
+        margin: 0 5px;
     }
 }
