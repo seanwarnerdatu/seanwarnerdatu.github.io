@@ -31,7 +31,6 @@ body {
 }
 
 /* Header styles aka the navbar*/
-
 .menu-icon {
     display: none;
   }
@@ -86,14 +85,13 @@ header nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
   }
 
   .web-banner {
     width: 70%;
     border: rgba(0, 180, 65, 0.6) solid 3px;
   }
-  
   
   .popup {
     position: relative;
@@ -102,15 +100,15 @@ header nav a:hover {
   
   .close-btn {
     position: absolute;
-    bottom: 10%;
-    left: 50%; /* Center horizontally */
+    bottom: 18%;
+    right: 22%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center vertically */
     color: white;
     cursor: pointer;
     z-index: 1000;
-    font-size: 14px;
-    width: 160px;
-    height: 40px;
+    font-size: 20px;
+    width: 220px;
+    height: 70px;
     border: #00b441 solid 2.5px;
     color: #ffffff;
     background-color: transparent;
@@ -131,19 +129,17 @@ header nav a:hover {
   
 
 /* Main styles | home */
-main {
-    font-family: CenturyGotnic, Arial, sans-serif;
-    padding: 10px; 
-    width: auto; 
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, #79912d 0%, #5c7f6d 25%, #274b35 51%, #201626 100%);
-  -webkit-animation: AnimateBG 8s ease infinite;
-          animation: AnimateBG 8s ease infinite;
-          z-index: -1;
+
+.home img{
+    height: auto;
+    margin-bottom: -5px;
 }
+
+.mobileintro{
+    display: none;
+}
+
+
 
 @-webkit-keyframes AnimateBG {
     0% {
@@ -169,12 +165,7 @@ main {
     }
   }
 
-.home{
-    padding-left: 30px;
-    padding-top: 100px;
-    font-size: 30px;
-    animation: slide-in-bottom 1s ease forwards;
-}
+
 
 /* Content styles */
 .divAbout {
@@ -648,8 +639,12 @@ footer {
         overflow-x: hidden;
     }
 
-    main{
-        height: 80vh;
+    .intro{
+        display: none;
+    }
+
+    .mobileintro{
+        display: block;
     }
 
     header {
@@ -668,8 +663,11 @@ footer {
       }
 
     .close-btn{
-        bottom: 0;
-        width: 35%;
+        bottom: 3%;
+        width: 120px;
+        height: 50px;
+        right: 1%;
+        font-size: 12px;
     }
 
     .logo-size {
@@ -713,10 +711,6 @@ footer {
         margin: 20px; /* Adjust the margin value as needed */
     }
 
-    main {
-        padding: 10px; /* Adjust padding for mobile content */
-    }
-
     #scrollTopBtn {
         display: flex; /* Ensure the button is visible */
         position: fixed;
@@ -724,12 +718,6 @@ footer {
         right: 20px;
         z-index: 999;
         padding: 10px;
-    }
-
-    .home {
-        padding-left: 5%; /* Adjust padding for mobile screens */
-        padding-top: 20px; /* Adjust padding for mobile screens */
-        font-size: 16px; /* Adjust font size for mobile screens */
     }
 
     .aboutbuttons,
@@ -784,6 +772,15 @@ footer {
     .skilltitle h1{
         font-size: 40px;
     }
+
+    .skills-container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+   
+    .containerSkills .row{
+        margin-top: 0;
+    }
     
     .row {
         flex-direction: column; /* Stack columns vertically on small screens */
@@ -832,6 +829,7 @@ footer {
         font-size: 16px;
         margin-left: auto;
         margin-right: auto;
+        text-align: justify;
     }
 
     .bottom-images {
@@ -857,6 +855,7 @@ footer {
         font-size: 40px;
     }
 
+    
     .dot-container,
     .buttons-container {
         text-align: center;
