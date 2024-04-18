@@ -74,6 +74,62 @@ header nav a:hover {
     color: #23F131;
 }
 
+.popup-overlay {
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .web-banner {
+    width: 70%;
+    border: rgba(0, 180, 65, 0.6) solid 3px;
+  }
+  
+  
+  .popup {
+    position: relative;
+    text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center vertically */
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+    width: 160px;
+    height: 40px;
+    border: #00b441 solid 2.5px;
+    color: #ffffff;
+    background-color: transparent;
+    transition: background-color 0.5s;
+    font-family: CenturyGotnic;
+    text-transform: uppercase;
+}
+
+  
+  .close-btn:hover {
+    background-color: #00b441;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+
 /* Main styles | home */
 main {
     font-family: CenturyGotnic, Arial, sans-serif;
@@ -149,8 +205,9 @@ main {
 }
 
 .portimg-container {
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: 100px;
+    margin-top: 80px;
 }
 
 .portimg-container img {
@@ -450,18 +507,30 @@ main {
     transform: scale(1.7);
 }
 
-/* TESTIMONIALS */
+/* testimonials */
 
 .testimonials{
     text-align: center;
     font-size: 60px;
     font-family: AgencyFB, Arial, sans-serif;
+    margin: 0;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+#services{
+justify-content: center;
+    background-size: 300% 300%;
+  background-image: linear-gradient(40deg, #79912d 0%, #5c7f6d 25%, #274b35 51%, #201626 100%);
+  -webkit-animation: AnimateBG 8s ease infinite;
+          animation: AnimateBG 8s ease infinite;
 }
 
 .services {
-    margin: 0px auto 100px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-top: 0;
+    padding-bottom: 90px;
 }
 
  .services .box-container{
@@ -481,18 +550,21 @@ main {
  
  .services .box-container .box h3{
     font-size: 30px;
-    color:#ff2291;
+    color:#00b441;
+    font-family: AgencyFB, Arial, sans-serif;
  }
  
  .services .box-container .box p{
     text-align: justify;
     font-size: 15px;
     line-height: 2;
+    font-family: CenturyGotnic, Arial, sans-serif;
  }
 
  .title-person {
     text-align: center;
     font-style: italic;
+    font-family: CenturyGotnic, Arial, sans-serif;
  }
   
 
@@ -568,11 +640,8 @@ footer {
     }
 }
 
-
-
- /* Responsive */
  /* Mobile Styles */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 820px) {
     body {
         background-image: url('/assets/bg.png');
         overflow-x: hidden;
@@ -588,6 +657,18 @@ footer {
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    .web-banner {
+        display: block;
+        width: 90%;
+        border: #00b441 solid 1.5px;
+        margin: 0 auto 10px;
+      }
+
+    .close-btn{
+        bottom: 0;
+        width: 35%;
     }
 
     .logo-size {
@@ -642,7 +723,7 @@ footer {
     #scrollTopBtn {
         display: flex; /* Ensure the button is visible */
         position: fixed;
-        bottom: 30px;
+        bottom: 20px;
         right: 20px;
         z-index: 999;
         padding: 10px;
@@ -654,11 +735,6 @@ footer {
         font-size: 16px; /* Adjust font size for mobile screens */
     }
 
-    .divAbout{
-        height: 120vh;
-        padding-top: 10px ;
-    }
-
     .aboutbuttons,
     .aboutbuttons:hover {
         padding: 10px; /* Adjust padding for mobile */
@@ -668,6 +744,8 @@ footer {
     .divAbout {
         flex-direction: column; /* Stack about content vertically for mobile */
         padding-right: 30px;
+        height: 125vh;
+        padding-top: 10px ;
     }
 
     .aboutTitle {
@@ -681,6 +759,7 @@ footer {
 
     .portimg-container {
         margin-right: 1%; /* Adjust margin for mobile */
+        margin-top: 20px;
         display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
@@ -689,6 +768,7 @@ footer {
     .portimg-container img {
         max-width: 50%; /* Set maximum width to fill container */
         height: auto;
+        padding-bottom: 200px;
     }
     
     .containerSkills {
