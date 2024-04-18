@@ -128,7 +128,7 @@ main {
     color: white; 
     background: rgba(0, 0, 0, 0.8); 
     height: 90vh;
-    padding-top:100px ;
+    padding-top: 100px ;
 }
 
 .aboutTitle{
@@ -654,18 +654,24 @@ footer {
         font-size: 16px; /* Adjust font size for mobile screens */
     }
 
-    .resume,
-    .resume:hover {
+    .divAbout{
+        height: 120vh;
+        padding-top: 10px ;
+    }
+
+    .aboutbuttons,
+    .aboutbuttons:hover {
         padding: 10px; /* Adjust padding for mobile */
         font-size: 14px; /* Adjust font size for mobile */
     }
 
     .divAbout {
         flex-direction: column; /* Stack about content vertically for mobile */
+        padding-right: 30px;
     }
 
     .aboutTitle {
-        font-size: 24px; /* Adjust font size for mobile */
+        font-size: 30px; /* Adjust font size for mobile */
     }
 
     .text {
@@ -674,7 +680,7 @@ footer {
     }
 
     .portimg-container {
-        margin-right: 5%; /* Adjust margin for mobile */
+        margin-right: 1%; /* Adjust margin for mobile */
         display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
@@ -777,12 +783,13 @@ footer {
     .dot-container,
     .buttons-container {
         text-align: center;
-        margin-top: 90px;
+        margin-top: 120px;
     }
     
     .dot-container {
         top: 50px;
         position: relative;
+        padding-top: 30px;
     }
     
     .dot {
@@ -791,7 +798,7 @@ footer {
     }
 
     .buttons-container{
-        margin-top: -112px;
+        margin-top: -80px;
     }
 
     footer{
