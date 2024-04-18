@@ -1,3 +1,5 @@
+// SCROLL TO TOP
+
 // Function to scroll to the top of the page
 function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
@@ -17,6 +19,9 @@ function showScrollTopButton() {
         scrollTopButton.style.display = 'none';
     }
 }
+
+
+// PROJECT SLIDESHOW
 
 var slideIndex = 1; // Start with the first slide
 showSlides(slideIndex);
@@ -62,6 +67,7 @@ document.querySelector('.next').addEventListener('click', function() {
   plusSlides(1);
 });
 
+// POPUPOVERLAY
 
 document.addEventListener('DOMContentLoaded', function() {
   const popupOverlay = document.querySelector('.popup-overlay');
@@ -91,4 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
   } catch (error) {
       console.error('Error accessing localStorage:', error);
   }
+});
+
+// MENU-BAR
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navbar = document.querySelector('.navbar');
+
+  menuIcon.addEventListener('click', function() {
+      navbar.classList.toggle('active');
+  });
 });
