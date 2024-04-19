@@ -175,8 +175,9 @@ header nav a:hover {
     padding-left: 30px;
     color: white; 
     background: rgba(0, 0, 0, 0.8); 
-    height: 90vh;
+    height: 100%;
     padding-top: 100px ;
+    padding-bottom: 100px;
 }
 
 .aboutTitle{
@@ -262,7 +263,7 @@ header nav a:hover {
     padding-right: 30px;
     padding-top: -1px;
     position: relative;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     background-size: 300% 300%;
@@ -414,13 +415,14 @@ header nav a:hover {
     padding-right: 30px;
     width: fit-content;
     margin: 0;
-    height: 100vh;
+    height: 100%;
+    display: flex;
 }
 
 .mySlides {
     align-items: center;
     margin-bottom: 5px;
-    height: 50vh;
+    height: 50%;
 }
 
 .textproject {
