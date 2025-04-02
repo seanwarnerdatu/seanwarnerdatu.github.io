@@ -257,147 +257,86 @@ header nav a:hover {
 
 
 /* Skills Checklist */
-  .containerSkills {
+.containerSkills {
     max-width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: -1px;
+    padding: 30px;
     position: relative;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-size: 300% 300%;
-  background-image: linear-gradient(90deg, #79912d 0%, #5c7f6d 25%, #274b35 51%, #201626 100%);
-  -webkit-animation: AnimateBG 8s ease infinite;
-          animation: AnimateBG 8s ease infinite;
+    background-image: linear-gradient(90deg, #79912d 0%, #5c7f6d 25%, #274b35 51%, #201626 100%);
+    -webkit-animation: AnimateBG 8s ease infinite;
+    animation: AnimateBG 8s ease infinite;
   }
-
-    .skilltitle{
+  
+  .skilltitle {
     text-align: center;
     justify-content: center;
     margin: 5px;
     font-family: AgencyFB, Arial, sans-serif;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 90px;
-    }
-
-    .skilltitle h1{
-        font-size: 60px;
-    }
-
-    .skilltitle p{
-        font-size: 30px;
-    }
-
+    padding: 0 30px 40px 30px;
+    max-width: 900px;
+  }
+  
+  .skilltitle h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .skilltitle p {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+  }
+  
   .skill {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-family: CenturyGotnic, Arial, sans-serif;
   }
-
-  .containerSkills .main-title h1::before{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 1px;
-	top: 125%;
-	left: 0;
-}
-.containerSkills .main-title h1::after{
-	content: '';
-	position: absolute;
-	width: 50%;
-	height: 3px;
-	top: calc(125% - 1px);
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.containerSkills .row{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 70px;
-}
-.row .col{
-	flex-basis: 46%;
-}
-.row .sub-title h2{
-	position: relative;
-	color: #242223;
-	font-size: 22px;
-	font-family: helvetica;
-	display: inline-block;
-	margin-bottom: 30px;
-}
-.row .sub-title h2::before{
-	content: '';
-	position: absolute;
-	width: 50%;
-	height: 1px;
-	top: 125%;
-	left: 0;
-	background-color: #808080;
-}
-.row .sub-title h2::after{
-	content: '';
-	position: absolute;
-	width: 25%;
-	height: 3px;
-	top: calc(125% - 1px);
-	left: 0;
-	background-color: 	#00b441;
-}
-.subject{
-	font-size: 18px;
-	font-weight: thin;
-	color: white;
-	padding-bottom: 15px;
-	text-transform: uppercase;
-}
-.progress-bar{
-	position: relative;
-	width: 100%;
-	height: 5px;
-	background-color: black;
-	border-radius: 15px;
-	margin-bottom: 20px;
-}
-.progress-bar::after{
-	position: absolute;
-	content: attr(value);
-	top: -35px;
-	right: 0;
-	color:white;
-	font-size: 18px;
-}
-.progress-line{
-	position: absolute;
-	width: 0%;
-	height: 7px;
-	background-color: 	#00b441;
-	border-radius: 15px;
-	top: -1px;
-	animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
-}
-
-@keyframes animate{
-	100%{
-		width: 100%;
-	}
-}
-.progress-line::after{
-	content: '';
-	position: absolute;
-	width: 13px;
-	height: 13px;
-	border-radius: 50%;
-	top: 50%;
-	left: 100%;
-	transform: translate(-50%, -50%);
-	background-color: 	#00b441;
-}
-
+  
+  .subject {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  @keyframes AnimateBG { 
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .skilltitle h1 {
+      font-size: 40px;
+    }
+    
+    .skilltitle p {
+      font-size: 20px;
+    }
+    
+    .subject {
+      font-size: 18px;
+    }
+  }
+  
 /* projects */
 .projecttitle {
     text-align: center;
